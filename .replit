@@ -1,0 +1,24 @@
+run = "bash sys_info.sh"
+
+[nix]
+packages = [
+  "lsb-release",
+  "openbox",
+  "xterm",
+  "tint2",
+  "pcmanfm",
+  "xorg.xorgserver",
+  "xorg.xsetroot",
+  "xvfb-run",
+  "x11vnc",
+  "novnc",
+  "git"
+]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[deployment]
+deploymentTarget = "cloudrun"
+run = "bash sys_info.sh"
